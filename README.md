@@ -30,6 +30,9 @@ This formula converts RGB values to luminance (grayscale intensity) using percep
 
 Make sure CUDA and OpenCV are installed and available in your system paths.
 
+Note
+There might be cases where the CPU performs faster than the GPU for smaller images due to memory transfer overhead and limited thread utilization. GPU acceleration becomes more effective with larger image sizes or batch processing.
+
 ### 🧱 Compile with `nvcc` 
 ```bash  
 nvcc main.cu -o grayscale `pkg-config --cflags --libs opencv4`
